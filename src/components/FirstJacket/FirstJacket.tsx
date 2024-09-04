@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import styles from "./Sleeveless.module.scss";
+import styles from "./FirstJacket.module.scss";
 
 const {
-  sleeveless,
+  jacket,
   img,
   line,
   arrowhead,
@@ -10,6 +10,9 @@ const {
   active_line,
   active_letter,
   active_arrowhead_border,
+  active_line_border,
+  active_head_right,
+  active_head_left,
   arrow_a,
   arrow_a_letter,
   arrow_a_head,
@@ -37,9 +40,18 @@ const {
   arrow_i,
   arrow_i_letter,
   arrow_i_head,
+  arrow_j,
+  arrow_j_letter,
+  arrow_j_head_right,
+  arrow_j_head_left,
+  arrow_l,
+  arrow_l_letter,
+  arrow_l_head_right,
+  arrow_l_head_left,
+  
 } = styles;
 
-export const Sleeveless: React.FC = () => {
+export const FirstJacket: React.FC = () => {
   const [selectedLine, setSelectedLine] = useState<string>("");
 
   const handleLineClick = (line: string) => {
@@ -47,8 +59,8 @@ export const Sleeveless: React.FC = () => {
   };
 
   return (
-    <div className={sleeveless}>
-      <img src="/icons/sleeveless.jpg" alt="sleeveless" className={img} />
+    <div className={jacket}>
+      <img src="/icons/jacket-1.jpg" alt="pants-1" className={img} />
       <div
         className={`${line} ${arrow_a} ${
           selectedLine === "A" ? active_line : ""
@@ -63,7 +75,9 @@ export const Sleeveless: React.FC = () => {
           A
         </span>
         <span
-          className={`${arrowhead} ${arrow_a_head} ${selectedLine === "A" ? active_arrowhead_border : ""}`}
+          className={`${arrowhead} ${arrow_a_head} ${
+            selectedLine === "A" ? active_arrowhead_border : ""
+          }`}
         ></span>
       </div>
       <div
@@ -80,7 +94,9 @@ export const Sleeveless: React.FC = () => {
           B
         </span>
         <span
-          className={`${arrowhead} ${arrow_b_head} ${selectedLine === "B" ? active_arrowhead_border : ""}`}
+          className={`${arrowhead} ${arrow_b_head} ${
+            selectedLine === "B" ? active_arrowhead_border : ""
+          }`}
         ></span>
       </div>
       <div
@@ -97,7 +113,9 @@ export const Sleeveless: React.FC = () => {
           C
         </span>
         <span
-          className={`${arrowhead} ${arrow_c_head} ${selectedLine === "C" ? active_arrowhead_border : ""}`}
+          className={`${arrowhead} ${arrow_c_head} ${
+            selectedLine === "C" ? active_arrowhead_border : ""
+          }`}
         ></span>
       </div>
       <div
@@ -114,7 +132,9 @@ export const Sleeveless: React.FC = () => {
           D
         </span>
         <span
-          className={`${arrowhead} ${arrow_d_head} ${selectedLine === "D" ? active_arrowhead_border : ""}`}
+          className={`${arrowhead} ${arrow_d_head} ${
+            selectedLine === "D" ? active_arrowhead_border : ""
+          }`}
         ></span>
       </div>
       <div
@@ -131,7 +151,9 @@ export const Sleeveless: React.FC = () => {
           E
         </span>
         <span
-          className={`${arrowhead} ${arrow_e_head} ${selectedLine === "E" ? active_arrowhead_border : ""}`}
+          className={`${arrowhead} ${arrow_e_head} ${
+            selectedLine === "E" ? active_arrowhead_border : ""
+          }`}
         ></span>
       </div>
       <div
@@ -148,7 +170,9 @@ export const Sleeveless: React.FC = () => {
           F
         </span>
         <span
-          className={`${arrowhead} ${arrow_f_head} ${selectedLine === "F" ? active_arrowhead_border : ""}`}
+          className={`${arrowhead} ${arrow_f_head} ${
+            selectedLine === "F" ? active_arrowhead_border : ""
+          }`}
         ></span>
       </div>
       <div
@@ -165,7 +189,9 @@ export const Sleeveless: React.FC = () => {
           G
         </span>
         <span
-          className={`${arrowhead} ${arrow_g_head} ${selectedLine === "G" ? active_arrowhead_border : ""}`}
+          className={`${arrowhead} ${arrow_g_head} ${
+            selectedLine === "G" ? active_arrowhead_border : ""
+          }`}
         ></span>
       </div>
       <div
@@ -182,7 +208,9 @@ export const Sleeveless: React.FC = () => {
           H
         </span>
         <span
-          className={`${arrowhead} ${arrow_h_head} ${selectedLine === "H" ? active_arrowhead_border : ""}`}
+          className={`${arrowhead} ${arrow_h_head} ${
+            selectedLine === "H" ? active_arrowhead_border : ""
+          }`}
         ></span>
       </div>
       <div
@@ -199,7 +227,69 @@ export const Sleeveless: React.FC = () => {
           I
         </span>
         <span
-          className={`${arrowhead} ${arrow_i_head} ${selectedLine === "I" ? active_arrowhead_border : ""}`}
+          className={`${arrowhead} ${arrow_i_head} ${
+            selectedLine === "I" ? active_arrowhead_border : ""
+          }`}
+        ></span>
+      </div>
+      <div
+        className={`${line} ${arrow_j} ${
+          selectedLine === "J" && active_line_border
+        }`}
+      >
+        <span
+          className={`${letter_wrap} ${arrow_j_letter} ${
+            selectedLine === "J" && active_letter
+          }`}
+          onClick={() => handleLineClick("J")}
+        >
+          J
+        </span>
+        <span
+          className={`${arrowhead} ${arrow_j_head_right} ${
+            selectedLine === "J" && active_arrowhead_border
+          }
+          ${
+            selectedLine === "J" && active_head_right
+          }`}
+        ></span>
+        <span
+          className={`${arrowhead} ${arrow_j_head_left} ${
+            selectedLine === "J" && active_arrowhead_border
+          }
+          ${
+            selectedLine === "J" && active_head_left
+          }`}
+        ></span>
+      </div>
+      <div
+        className={`${line} ${arrow_l} ${
+          selectedLine === "L" && active_line_border
+        }`}
+      >
+        <span
+          className={`${letter_wrap} ${arrow_l_letter} ${
+            selectedLine === "L" && active_letter
+          }`}
+          onClick={() => handleLineClick("L")}
+        >
+          L
+        </span>
+        <span
+          className={`${arrowhead} ${arrow_l_head_right} ${
+            selectedLine === "L" && active_arrowhead_border
+          }
+          ${
+            selectedLine === "L" && active_head_right
+          }`}
+        ></span>
+        <span
+          className={`${arrowhead} ${arrow_l_head_left} ${
+            selectedLine === "L" && active_arrowhead_border
+          }
+          ${
+            selectedLine === "L" && active_head_left
+          }`}
         ></span>
       </div>
     </div>

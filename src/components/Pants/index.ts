@@ -1,1 +1,0 @@
-export *  from './Pants.module.scss';

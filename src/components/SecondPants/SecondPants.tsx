@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import styles from "./Sleeveless.module.scss";
+import styles from "./SecondPants.module.scss";
 
 const {
-  sleeveless,
+  pants_1,
   img,
   line,
   arrowhead,
@@ -13,12 +13,10 @@ const {
   arrow_a,
   arrow_a_letter,
   arrow_a_head,
-  arrow_b,
-  arrow_b_letter,
-  arrow_b_head,
-  arrow_c,
-  arrow_c_letter,
-  arrow_c_head,
+  arrow_b_c,
+  arrow_b_c_letter_b,
+  arrow_b_c_letter_c,
+  arrow_b_c_head,
   arrow_d,
   arrow_d_letter,
   arrow_d_head,
@@ -34,12 +32,9 @@ const {
   arrow_h,
   arrow_h_letter,
   arrow_h_head,
-  arrow_i,
-  arrow_i_letter,
-  arrow_i_head,
 } = styles;
 
-export const Sleeveless: React.FC = () => {
+export const SecondPants: React.FC = () => {
   const [selectedLine, setSelectedLine] = useState<string>("");
 
   const handleLineClick = (line: string) => {
@@ -47,8 +42,8 @@ export const Sleeveless: React.FC = () => {
   };
 
   return (
-    <div className={sleeveless}>
-      <img src="/icons/sleeveless.jpg" alt="sleeveless" className={img} />
+    <div className={pants_1}>
+      <img src="/icons/pants-2.jpg" alt="pants-1" className={img}/>
       <div
         className={`${line} ${arrow_a} ${
           selectedLine === "A" ? active_line : ""
@@ -67,37 +62,28 @@ export const Sleeveless: React.FC = () => {
         ></span>
       </div>
       <div
-        className={`${line} ${arrow_b} ${
-          selectedLine === "B" ? active_line : ""
+        className={`${line} ${arrow_b_c} ${
+          (selectedLine === "B" || selectedLine === "C") ? active_line : ""
         }`}
-        onClick={() => handleLineClick("B")}
       >
         <span
-          className={`${letter_wrap} ${arrow_b_letter} ${
+          className={`${letter_wrap} ${arrow_b_c_letter_b} ${
             selectedLine === "B" ? active_letter : ""
           }`}
+          onClick={() => handleLineClick("B")}
         >
           B
         </span>
         <span
-          className={`${arrowhead} ${arrow_b_head} ${selectedLine === "B" ? active_arrowhead_border : ""}`}
-        ></span>
-      </div>
-      <div
-        className={`${line} ${arrow_c} ${
-          selectedLine === "C" ? active_line : ""
-        }`}
-        onClick={() => handleLineClick("C")}
-      >
-        <span
-          className={`${letter_wrap} ${arrow_c_letter} ${
+          className={`${letter_wrap} ${arrow_b_c_letter_c} ${
             selectedLine === "C" ? active_letter : ""
           }`}
+          onClick={() => handleLineClick("C")}
         >
           C
         </span>
         <span
-          className={`${arrowhead} ${arrow_c_head} ${selectedLine === "C" ? active_arrowhead_border : ""}`}
+          className={`${arrowhead} ${arrow_b_c_head} ${(selectedLine === "B" || selectedLine === "C") ? active_arrowhead_border : ""}`}
         ></span>
       </div>
       <div
@@ -183,23 +169,6 @@ export const Sleeveless: React.FC = () => {
         </span>
         <span
           className={`${arrowhead} ${arrow_h_head} ${selectedLine === "H" ? active_arrowhead_border : ""}`}
-        ></span>
-      </div>
-      <div
-        className={`${line} ${arrow_i} ${
-          selectedLine === "I" ? active_line : ""
-        }`}
-        onClick={() => handleLineClick("I")}
-      >
-        <span
-          className={`${letter_wrap} ${arrow_i_letter} ${
-            selectedLine === "I" ? active_letter : ""
-          }`}
-        >
-          I
-        </span>
-        <span
-          className={`${arrowhead} ${arrow_i_head} ${selectedLine === "I" ? active_arrowhead_border : ""}`}
         ></span>
       </div>
     </div>

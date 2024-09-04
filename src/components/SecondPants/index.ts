@@ -1,0 +1,1 @@
+export *  from './SecondPants.module.scss';

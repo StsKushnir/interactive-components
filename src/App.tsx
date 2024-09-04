@@ -1,14 +1,20 @@
 import "./App.css";
-import { Jacket } from "./components/Jacket/Jacket";
-import { Pants } from "./components/Pants/Pants";
+import { FirstPants } from "./components/FirstPants/FirstPants";
+import { FirstJacket } from "./components/FirstJacket/FirstJacket";
+import { SecondPants } from "./components/SecondPants/SecondPants";
 import { Sleeveless } from "./components/Sleeveless/Sleeveless";
+import { Sweater } from "./components/Sweater/Sweater";
+import { SecondJacket } from "./components/SecondJacket/SecondJacket";
 
 function App() {
   return (
     <>
-      <Jacket />
-      <Pants />
+      <FirstPants />
+      <SecondPants />
       <Sleeveless />
+      <Sweater />
+      <FirstJacket />
+      <SecondJacket />
     </>
   );
 }
