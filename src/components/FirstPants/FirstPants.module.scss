@@ -55,7 +55,7 @@
   height: 85%;
 
   &_letter {
-    transform: rotate(179deg);
+    transform: rotate(175deg);
     top: 50%;
     right: -7px;
     padding: 2px 4px;
@@ -77,13 +77,13 @@
   &_letter_b {
     transform: rotate(90deg);
     top: 20%;
-    left: -3px;
+    right: -10px;
     padding: 2px 4px;
   }
   &_letter_c {
     transform: rotate(90deg);
     top: 60%;
-    left: -3px;
+    right: -10px;
     padding: 2px 4px;
   }
 
